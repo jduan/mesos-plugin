@@ -526,7 +526,7 @@ public class JenkinsScheduler implements Scheduler {
                 .newBuilder()
                 .setName("cpus")
                 .setType(Value.Type.SCALAR)
-                .setRole(request.request.role)
+                .setRole(mesosCloud.getRole())
                 .setScalar(
                     Value.Scalar.newBuilder()
                         .setValue(request.request.cpus).build()).build())
@@ -535,7 +535,7 @@ public class JenkinsScheduler implements Scheduler {
                 .newBuilder()
                 .setName("mem")
                 .setType(Value.Type.SCALAR)
-                .setRole(request.request.role)
+                .setRole(mesosCloud.getRole())
                 .setScalar(
                     Value.Scalar
                         .newBuilder()
